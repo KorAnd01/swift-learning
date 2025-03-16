@@ -7,10 +7,10 @@ let userHeight: Double = 193.5
 var userVeight: Float = 90.3
 var userMarrid: Bool = true
 
-print ("имя:", userName)
-print ("гражданство:", userCitizenship)
-print ("возраст:", userAge)
-print ("рост:", userHeight)
-print ("вес:", userVeight)
-print ("семейное положение", userMarrid)
+print("имя:", userName)
+print("гражданство:", userCitizenship)
+print("возраст:", userAge)
+print("рост:", userHeight)
+print("вес:", userVeight)
+print("семейное положение", userMarrid)
 
