@@ -1,15 +1,20 @@
 import UIKit
 
-var boysNumbers = ["Иван", "Коля", "Семен", "Петр", "Андрей", "Павел", "Илья", "Миша", "Вася", "Леша", "Женя", "Саша"]
-var girlsNubers = ["Алла", "Анна", "Алина", "Света", "Люба", "Катя", "Настя"]
+var pupleNumbers = ["Иван", "Коля", "Семен", "Петр", "Андрей", "Павел", "Илья", "Миша", "Вася", "Леша", "Женя", "Саша"]
+
+pupleNumbers.insert(contentsOf: ["Алла"], at: 0)
+pupleNumbers.insert(contentsOf: ["Анна"], at: 2)
+pupleNumbers.insert(contentsOf: ["Алина"], at: 4)
+pupleNumbers.insert(contentsOf: ["Света"], at: 6)
+pupleNumbers.insert(contentsOf: ["Люба"], at: 8)
+pupleNumbers.insert(contentsOf: ["Катя"], at: 10)
+pupleNumbers.insert(contentsOf: ["Настя"], at: 12)
+
+pupleNumbers.removeLast(9)
+
+pupleNumbers.sort {firstIPuple, lastPuple in
+    firstIPuple < lastPuple
+}
+print("весь список по алфавиту:, \(pupleNumbers)")
 
 
-//boysNumbers.insert(contentsOf: girlsNubers, at: 1)
-                   
-//for item in puplsNumbers.enumerated() {
-   // print("\(item.offset), \(item.element)")
-//}
-boysNumbers.removeLast(5)
-girlsNubers.removeLast(2)
-var puplsNumbers = boysNumbers + girlsNubers
-print("результат: \(puplsNumbers.sorted())")
