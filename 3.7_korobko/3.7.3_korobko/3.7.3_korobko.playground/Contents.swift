@@ -12,9 +12,8 @@ pupleNumbers.insert(contentsOf: ["Настя"], at: 12)
 
 pupleNumbers.removeLast(9)
 
-pupleNumbers.sort {firstIPuple, lastPuple in
-    firstIPuple < lastPuple
-}
+pupleNumbers.sorted()
+
 print("весь список по алфавиту:, \(pupleNumbers)")
 
 

@@ -2,21 +2,20 @@ import UIKit
 
 var numbers = [2, 4, 6, 8]
 print(numbers.count)
-numbers[0]+=4
+numbers[0]+=numbers.count
 print (numbers)
 
-var resultNumbers: [Int] = []
-
-for item in numbers.enumerated() {
-    if item.element != 0 {
-        resultNumbers.append(numbers[0] * numbers[1] * numbers[2] * numbers[3])
-        
- //       resultNumbers.append(numbers[0] * numbers[1] * numbers[2] * numbers[3])
+var resultNumber: [Int]? = [6, 4, 6, 8]
+    
+if let multiplicationNumber = resultNumber {
+    var point = 1
+    for number in multiplicationNumber {
+        point *= number
     }
-    print (resultNumbers)
+    resultNumber?.append(point)
 }
-numbers += resultNumbers
-print(numbers[0...4])
-
+if let multiplicationNumber = resultNumber {
+    print(multiplicationNumber)
+}
 
 
