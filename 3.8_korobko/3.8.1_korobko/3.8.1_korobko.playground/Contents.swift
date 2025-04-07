@@ -5,8 +5,5 @@ var stringSet: Set = ["розовый", "черный", "синий", "кори�
 if stringSet.count > 5 {
     stringSet.insert("красный")
 }
-//let sortedStringsArray = Array(stringSet.sorted())
-//for element in sortedStringsArray.sorted() {
-//print(element)
 
 print(stringSet.sorted())
