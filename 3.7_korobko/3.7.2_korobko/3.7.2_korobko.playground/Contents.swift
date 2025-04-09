@@ -2,15 +2,20 @@ import UIKit
 
 var numbers = [2, 4, 6, 8]
 print(numbers.count)
-numbers[0]+=numbers.count
-print (numbers)
+numbers[0] += numbers.count
+print(numbers)
 
-var resultNumber: Int? = 1
+var resultNumber: Int?
 
-    
-for case let item in numbers {
-    resultNumber? *= item
+for item in numbers {
+    if let result = resultNumber {
+        resultNumber = result * item
+    } else {
+        resultNumber = item
+    }
+    if let resultNumber {
+        numbers.append(resultNumber)
+    }
 }
 
-numbers.append(resultNumber!)
-print (numbers)
+print(numbers)
