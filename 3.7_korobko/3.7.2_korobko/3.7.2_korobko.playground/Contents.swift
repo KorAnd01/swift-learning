@@ -5,17 +5,12 @@ print(numbers.count)
 numbers[0]+=numbers.count
 print (numbers)
 
-var resultNumber: [Int]? = [6, 4, 6, 8]
+var resultNumber: Int? = 1
+
     
-if let multiplicationNumber = resultNumber {
-    var point = 1
-    for number in multiplicationNumber {
-        point *= number
-    }
-    resultNumber?.append(point)
-}
-if let multiplicationNumber = resultNumber {
-    print(multiplicationNumber)
+for case let item in numbers {
+    resultNumber? *= item
 }
 
-
+numbers.append(resultNumber!)
+print (numbers)
