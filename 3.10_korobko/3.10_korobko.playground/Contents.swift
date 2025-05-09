@@ -1,15 +1,21 @@
 import UIKit
 
-let dates = ["15.05.2025", "25.06.2025", "06.07.2025"]
-let steps = [10000, 5000]
+let dates = ["15.05.2025", "25.06.2025", "15.05.2025"]
+let steps = [10000, 5000, 34]
 
-var result: [(date: String, steps: Int)] = []
+var result: [String: Int] = [:]
 
 for (index, date) in dates.enumerated() {
     let stepCount = index < steps.count ? steps[index] : 0
-    result.append((date: date, steps: stepCount))
+    if let existingSteps = result[date] {
+            result[date] = existingSteps + stepCount
+        } else {
+            result[date] = stepCount
+        }
+    }
+
+
+for (date, stepCount) in result {
+    print("Дата: \(date), Шаги: \(stepCount)")
 }
 
-for item in result {
-    print("Дата: \(item.date), Шаги: \(item.steps)")
-}
