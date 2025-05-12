@@ -8,12 +8,11 @@ var result: [String: Int] = [:]
 for (index, date) in dates.enumerated() {
     let stepCount = index < steps.count ? steps[index] : 0
     if let existingSteps = result[date] {
-            result[date] = existingSteps + stepCount
-        } else {
-            result[date] = stepCount
-        }
+        result[date] = existingSteps + stepCount
+    } else {
+        result[date] = stepCount
     }
-
+}
 
 for (date, stepCount) in result {
     print("Дата: \(date), Шаги: \(stepCount)")
