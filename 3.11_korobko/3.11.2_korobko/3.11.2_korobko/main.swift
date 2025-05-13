@@ -45,9 +45,10 @@ while shouldContinue {
         print("Результат: \(result)")
     }
 
-    print("Хотите начать сначала или закончить выполнение программы? (Y/N): ", terminator: "")
-    if let answer = readLine()?.lowercased(), answer != "Y" {
+    print("Хотите начать сначала или закончить выполнение программы? (да/нет): ", terminator: "")
+    if let answer = readLine()?.lowercased(), answer != "да" {
         shouldContinue = false
         print("Завершение программы.")
     }
 }
+
