@@ -1,5 +1,3 @@
-mport Foundation
-
 func isValidLength(_ input: String) -> Int? {
     if let length = Int(input), length >= 4 {
         return length
