@@ -1,8 +1,9 @@
 import Foundation
 
-func findMinMax(numbers: [Int]) -> (min: Int, max: Int) {
-    var min = numbers[0]
-    var max = numbers[0]
+func findMinMax(numbers: [Int]) -> (min: Int, max: Int)? {
+   guard var min = numbers.first, var max = numbers.first else {
+       return nil
+   }
 
     for number in numbers {
         if number < min {
@@ -21,11 +22,11 @@ if let input = readLine() {
     let stringNumbers = input.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }
     let numbers = stringNumbers.compactMap { Int($0) }
 
-    if numbers.isEmpty {
-        print("Ошибка: список пуст или содержит не числа.")
-    } else {
-        let result = findMinMax(numbers: numbers)
+    if let result = findMinMax(numbers: numbers) {
         print("Минимальное число: \(result.min)")
         print("Максимальное число: \(result.max)")
+        } else {
+            print("Ошибка: список пуст или содержит не числа.")
     }
 }
+
